@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Cart | BabyCare</title>
+  <link rel="stylesheet" href="cssstyle.css">
+</head>
+<body>
+  <header class="navbar">
+  <div class="nav__bar">
+    <h1 class="logo">BabyWorld</h1>
+    <nav class="nav_links_wrapper">
+      <ul class="nav__links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <section class="container">
+    <h2 class="section__header">Your Cart</h2>
+    <div id="cartItems" class="cart__grid"></div>
+  </section>
+
+  <script>
+    const cartContainer = document.getElementById("cartItems");
+    const cart = JSON.parse(localStorage.getItem("babyworldCart")) || [];
+
+    if (cart.length === 0) {
+      cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+    } else {
+      cart.forEach(item => {
+        const card = document.createElement("div");
+        card.classList.add("product__card");
+        card.innerHTML = `
+          <img src="${item.image}" alt="${item.name}" />
+          <h3>${item.name}</h3>
+          <p>${item.price}</p>
+        `;
+        cartContainer.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>
