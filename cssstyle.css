@@ -11,14 +11,14 @@
   --font-family: 'Poppins', sans-serif;
 }
 
-/* RESET */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
+
 body {
   font-family: var(--font-family);
   color:black;
@@ -27,14 +27,14 @@ body {
   
 }
 
-/* CONTAINER */
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-/* NAVBAR */
+
 .navbar {
   background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
@@ -83,7 +83,6 @@ body {
   color: #09f496 !important;
   border-bottom: 2px solid #09f496;
 }
-/* HERO SECTION */
 .hero {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent),
               url("img/bg.jpeg");
@@ -142,7 +141,7 @@ body {
   }
 }
 
-/* Services Page Styles */
+
 .services {
   padding: 4rem 1rem;
 }
@@ -180,7 +179,7 @@ body {
   
 }
 
-/* Products Page Styles */
+
 .products__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -222,7 +221,7 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Additional Category Section */
+
 .product-category {
   padding: 2rem 0;
 }
